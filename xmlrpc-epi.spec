@@ -81,9 +81,7 @@ rm -f missing
 libtoolize --copy --force
 aclocal
 autoconf
-mv -f COPYING COPYING.orig
-automake -a -c -f
-mv -f COPYING.orig COPYING
+automake -a -c -f --foreign
 %configure \
 	--program-prefix=xmlrpc-epi-
 %{__make}
