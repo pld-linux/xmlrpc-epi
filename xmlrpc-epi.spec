@@ -4,7 +4,7 @@ Summary:	XML-RPC EPI library - an implementation of the xmlrpc protocol
 Summary(pl):	Biblioteka XML-RPC EPI - implementacja protoko³u xmlrpc
 Name:		xmlrpc-epi
 Version:	0.51
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/xmlrpc-epi/%{name}-%{version}.tar.gz
@@ -41,7 +41,8 @@ API to przesz³o test sprawdzaj±cy poprawno¶æ implementacji w grudniu
 Summary:	Header files etc to develop XML-RPC applications
 Summary(pl):	Pliki nag³ówkowe do tworzenia aplikacji XML-RPC
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
+Requires:	expat-devel
 
 %description devel
 Header files etc needed to develop XML-RPC applications.
@@ -53,7 +54,7 @@ Pliki nag³ówkowe potrzebne do tworzenia aplikacji u¿ywaj±cych XML-RPC.
 Summary:	Static XML-RPC EPI libraries
 Summary(pl):	Biblioteki statyczne XML-RPC EPI
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static XML-RPC EPI libraries.
@@ -65,7 +66,7 @@ Biblioteki statyczne XML-RPC EPI.
 Summary:	XML-RPC sample programs
 Summary(pl):	Programy przyk³adowe XML-RPC
 Group:		Applications/Text
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description progs
 Sample programs for XML-RPC EPI library.
@@ -78,7 +79,6 @@ Programy przyk³adowe do biblioteki XML-RPC EPI.
 %patch0 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
