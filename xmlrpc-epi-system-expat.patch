@@ -1,4 +1,3 @@
-Only in xmlrpc-epi-0.50.fixed: Makefile
 diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude config.sub --exclude config.guess --exclude INSTALL --exclude COPYING --exclude mkinstalldirs --exclude Makfile --exclude Makefile.in --exclude aclocal.m4 --exclude configure --exclude '*.o' --exclude '*~' --exclude '*.lo' --exclude .libs --exclude .deps xmlrpc-epi-0.50/Makefile.am xmlrpc-epi-0.50.fixed/Makefile.am
 --- xmlrpc-epi-0.50/Makefile.am	Tue Apr 10 03:37:40 2001
 +++ xmlrpc-epi-0.50.fixed/Makefile.am	Thu Apr 11 16:26:38 2002
@@ -8,17 +7,13 @@ diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude co
  
  CHANGE_LOG_GEN_BIN = scripts/cvs2cl.pl
  CHANGE_LOG_GEN_FLAGS = -t -r -b --accum -I ChangeLog --gmt --prune
-Only in xmlrpc-epi-0.50.fixed: autom4te.cache
-Only in xmlrpc-epi-0.50.fixed: config.log
-Only in xmlrpc-epi-0.50.fixed: config.status
-diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude config.sub --exclude config.guess --exclude INSTALL --exclude COPYING --exclude mkinstalldirs --exclude Makfile --exclude Makefile.in --exclude aclocal.m4 --exclude configure --exclude '*.o' --exclude '*~' --exclude '*.lo' --exclude .libs --exclude .deps xmlrpc-epi-0.50/configure.in xmlrpc-epi-0.50.fixed/configure.in
---- xmlrpc-epi-0.50/configure.in	Thu Sep 27 22:56:32 2001
-+++ xmlrpc-epi-0.50.fixed/configure.in	Thu Apr 11 16:51:11 2002
-@@ -13,13 +13,10 @@
- AC_PROG_INSTALL
+diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude config.sub --exclude config.guess --exclude INSTALL --exclude COPYING --exclude mkinstalldirs --exclude Makfile --exclude Makefile.in --exclude aclocal.m4 --exclude configure --exclude '*.o' --exclude '*~' --exclude '*.lo' --exclude .libs --exclude .deps xmlrpc-epi-0.51/configure.in xmlrpc-epi-0.51.fixed/configure.in
+--- xmlrpc-epi-0.51/configure.in	Thu Sep 27 22:56:32 2001
++++ xmlrpc-epi-0.51.fixed/configure.in	Thu Apr 11 16:51:11 2002
+@@ -14,12 +14,10 @@
  AC_PROG_LN_S
  AC_PROG_MAKE_SET
--AC_PROG_RANLIB
+ AC_PROG_LIBTOOL
 -
 -LIBS="-L/usr/local/lib"
  
@@ -40,8 +35,6 @@ diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude co
  
  
  
-Only in xmlrpc-epi-0.50.fixed: libtool
-Only in xmlrpc-epi-0.50.fixed/sample: Makefile
 diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude config.sub --exclude config.guess --exclude INSTALL --exclude COPYING --exclude mkinstalldirs --exclude Makfile --exclude Makefile.in --exclude aclocal.m4 --exclude configure --exclude '*.o' --exclude '*~' --exclude '*.lo' --exclude .libs --exclude .deps xmlrpc-epi-0.50/sample/Makefile.am xmlrpc-epi-0.50.fixed/sample/Makefile.am
 --- xmlrpc-epi-0.50/sample/Makefile.am	Fri Aug 31 23:38:27 2001
 +++ xmlrpc-epi-0.50.fixed/sample/Makefile.am	Thu Apr 11 16:58:25 2002
@@ -79,14 +72,6 @@ diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude co
 -memtest_LDADD = -L@prefix@/lib ../src/libxmlrpc.la
 +memtest_LDADD = ../src/libxmlrpc.la
  
-Only in xmlrpc-epi-0.50.fixed/sample: client
-Only in xmlrpc-epi-0.50.fixed/sample: hello_client
-Only in xmlrpc-epi-0.50.fixed/sample: hello_server
-Only in xmlrpc-epi-0.50.fixed/sample: memtest
-Only in xmlrpc-epi-0.50.fixed/sample: sample
-Only in xmlrpc-epi-0.50.fixed/sample: server
-Only in xmlrpc-epi-0.50.fixed/sample: server_compliance_test
-Only in xmlrpc-epi-0.50.fixed/src: Makefile
 diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude config.sub --exclude config.guess --exclude INSTALL --exclude COPYING --exclude mkinstalldirs --exclude Makfile --exclude Makefile.in --exclude aclocal.m4 --exclude configure --exclude '*.o' --exclude '*~' --exclude '*.lo' --exclude .libs --exclude .deps xmlrpc-epi-0.50/src/Makefile.am xmlrpc-epi-0.50.fixed/src/Makefile.am
 --- xmlrpc-epi-0.50/src/Makefile.am	Sun Sep 16 22:27:27 2001
 +++ xmlrpc-epi-0.50.fixed/src/Makefile.am	Thu Apr 11 16:27:17 2002
@@ -101,10 +86,9 @@ diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude co
  libxmlrpc_la_SOURCES = \
  	base64.c \
  	encodings.c \
-Only in xmlrpc-epi-0.50.fixed/src: libxmlrpc.la
-diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude config.sub --exclude config.guess --exclude INSTALL --exclude COPYING --exclude mkinstalldirs --exclude Makfile --exclude Makefile.in --exclude aclocal.m4 --exclude configure --exclude '*.o' --exclude '*~' --exclude '*.lo' --exclude .libs --exclude .deps xmlrpc-epi-0.50/src/xml_element.c xmlrpc-epi-0.50.fixed/src/xml_element.c
---- xmlrpc-epi-0.50/src/xml_element.c	Mon May 14 20:31:28 2001
-+++ xmlrpc-epi-0.50.fixed/src/xml_element.c	Thu Apr 11 16:39:19 2002
+diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude config.sub --exclude config.guess --exclude INSTALL --exclude COPYING --exclude mkinstalldirs --exclude Makfile --exclude Makefile.in --exclude aclocal.m4 --exclude configure --exclude '*.o' --exclude '*~' --exclude '*.lo' --exclude .libs --exclude .deps xmlrpc-epi-0.51/src/xml_element.c xmlrpc-epi-0.51.fixed/src/xml_element.c
+--- xmlrpc-epi-0.51/src/xml_element.c	Mon May 14 20:31:28 2001
++++ xmlrpc-epi-0.51.fixed/src/xml_element.c	Thu Apr 11 16:39:19 2002
 @@ -77,7 +77,15 @@
  
  #include "xml_element.h"
@@ -126,7 +110,7 @@ diff -ru --exclude missing --exclude ltmain.sh --exclude install-sh --exclude co
           long byte_idx = XML_GetCurrentByteIndex(parser);
           int byte_total = XML_GetCurrentByteCount(parser);
 +#ifdef HAVE_XMLPARSE_H
-          const XML_LChar XMLPARSEAPI * error_str = XML_ErrorString(err_code);
+          const XML_LChar * error_str = XML_ErrorString(err_code);
 +#else
 +#ifdef HAVE_EXPAT_H
 +         const XMLPARSEAPI(XML_LChar) * error_str = XML_ErrorString(err_code);
