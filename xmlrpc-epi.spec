@@ -8,7 +8,7 @@ Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/xmlrpc-epi/%{name}-%{version}.tar.gz
-# Source0-md5: 51c5f062365f82ff1c26c2763e7f0654
+# Source0-md5:	51c5f062365f82ff1c26c2763e7f0654
 Patch0:		%{name}-system-expat.patch
 URL:		http://xmlrpc-epi.sourceforge.net/
 BuildRequires:	autoconf
