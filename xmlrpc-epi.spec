@@ -80,8 +80,8 @@ Programy przyk³adowe do biblioteki XML-RPC EPI.
 rm -f missing
 libtoolize --copy --force
 aclocal
-autoconf
-automake -a -c -f --foreign
+%{__autoconf}
+%{__automake}
 %configure \
 	--program-prefix=xmlrpc-epi-
 %{__make}
