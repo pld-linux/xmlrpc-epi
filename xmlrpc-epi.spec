@@ -30,7 +30,7 @@ test suite in December 2000.
 
 %description -l pl
 xmlrpc-epi to implementacja protoko³u xmlrpc napisana w C. Daje proste
-w u¿yciu API dla programistów do serializacji ¿±dañ RPC do i z XML.
+w u¿yciu API dla programistów do serializacji ¿±dañ RPC do i z XML-a.
 Nie zawiera warstwy transportowej typu HTTP. API bazuje g³ównie na
 w³asno¶ciowym kodzie napisanym do u¿ytku wewnêtrznego na Epinions.com
 i zosta³o pó¼niej zmodyfikowane, aby w³±czyæ idee protoko³u xmlrpc.
