@@ -36,7 +36,7 @@ w³asno¶ciowym kodzie napisanym do u¿ytku wewnêtrznego na Epinions.com
 i zosta³o pó¼niej zmodyfikowane, aby w³±czyæ idee protoko³u xmlrpc.
 API to przesz³o test sprawdzaj±cy poprawno¶æ implementacji w grudniu
 2000.
-     
+
 %package devel
 Summary:	Header files etc to develop XML-RPC applications
 Summary(pl):	Pliki nag³ówkowe do tworzenia aplikacji XML-RPC
@@ -105,7 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog NEWS README 
+%doc AUTHORS COPYING ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}
