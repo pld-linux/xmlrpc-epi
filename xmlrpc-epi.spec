@@ -1,7 +1,7 @@
 # TODO:
 # - fix group for -progs subpackage
 Summary:	XML-RPC EPI library - an implementation of the xmlrpc protocol
-Summary(pl.UTF-8):   Biblioteka XML-RPC EPI - implementacja protokołu xmlrpc
+Summary(pl.UTF-8):	Biblioteka XML-RPC EPI - implementacja protokołu xmlrpc
 Name:		xmlrpc-epi
 Version:	0.51
 Release:	3
@@ -40,7 +40,7 @@ API to przeszło test sprawdzający poprawność implementacji w grudniu
 
 %package devel
 Summary:	Header files etc to develop XML-RPC applications
-Summary(pl.UTF-8):   Pliki nagłówkowe do tworzenia aplikacji XML-RPC
+Summary(pl.UTF-8):	Pliki nagłówkowe do tworzenia aplikacji XML-RPC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	expat-devel
@@ -53,7 +53,7 @@ Pliki nagłówkowe potrzebne do tworzenia aplikacji używających XML-RPC.
 
 %package static
 Summary:	Static XML-RPC EPI libraries
-Summary(pl.UTF-8):   Biblioteki statyczne XML-RPC EPI
+Summary(pl.UTF-8):	Biblioteki statyczne XML-RPC EPI
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -65,7 +65,7 @@ Biblioteki statyczne XML-RPC EPI.
 
 %package progs
 Summary:	XML-RPC sample programs
-Summary(pl.UTF-8):   Programy przykładowe XML-RPC
+Summary(pl.UTF-8):	Programy przykładowe XML-RPC
 Group:		Applications/Text
 Requires:	%{name} = %{version}-%{release}
 
