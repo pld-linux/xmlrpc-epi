@@ -1,7 +1,7 @@
 # TODO:
 # - fix group for -progs subpackage
 Summary:	XML-RPC EPI library - an implementation of the xmlrpc protocol
-Summary(pl):	Biblioteka XML-RPC EPI - implementacja protoko≥u xmlrpc
+Summary(pl.UTF-8):   Biblioteka XML-RPC EPI - implementacja protoko≈Çu xmlrpc
 Name:		xmlrpc-epi
 Version:	0.51
 Release:	3
@@ -29,18 +29,18 @@ internal usage at Epinions.com, and was later modified to incorporate
 concepts from the xmlrpc protocol. It passed the xmlrpc validation
 test suite in December 2000.
 
-%description -l pl
-xmlrpc-epi to implementacja protoko≥u xmlrpc napisana w C. Daje proste
-w uøyciu API dla programistÛw do serializacji ø±daÒ RPC do i z XML-a.
-Nie zawiera warstwy transportowej typu HTTP. API bazuje g≥Ûwnie na
-w≥asno∂ciowym kodzie napisanym do uøytku wewnÍtrznego na Epinions.com
-i zosta≥o pÛºniej zmodyfikowane, aby w≥±czyÊ idee protoko≥u xmlrpc.
-API to przesz≥o test sprawdzaj±cy poprawno∂Ê implementacji w grudniu
+%description -l pl.UTF-8
+xmlrpc-epi to implementacja protoko≈Çu xmlrpc napisana w C. Daje proste
+w u≈ºyciu API dla programist√≥w do serializacji ≈ºƒÖda≈Ñ RPC do i z XML-a.
+Nie zawiera warstwy transportowej typu HTTP. API bazuje g≈Ç√≥wnie na
+w≈Çasno≈õciowym kodzie napisanym do u≈ºytku wewnƒôtrznego na Epinions.com
+i zosta≈Ço p√≥≈∫niej zmodyfikowane, aby w≈ÇƒÖczyƒá idee protoko≈Çu xmlrpc.
+API to przesz≈Ço test sprawdzajƒÖcy poprawno≈õƒá implementacji w grudniu
 2000.
 
 %package devel
 Summary:	Header files etc to develop XML-RPC applications
-Summary(pl):	Pliki nag≥Ûwkowe do tworzenia aplikacji XML-RPC
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe do tworzenia aplikacji XML-RPC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	expat-devel
@@ -48,32 +48,32 @@ Requires:	expat-devel
 %description devel
 Header files etc needed to develop XML-RPC applications.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe potrzebne do tworzenia aplikacji uøywaj±cych XML-RPC.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe potrzebne do tworzenia aplikacji u≈ºywajƒÖcych XML-RPC.
 
 %package static
 Summary:	Static XML-RPC EPI libraries
-Summary(pl):	Biblioteki statyczne XML-RPC EPI
+Summary(pl.UTF-8):   Biblioteki statyczne XML-RPC EPI
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static XML-RPC EPI libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne XML-RPC EPI.
 
 %package progs
 Summary:	XML-RPC sample programs
-Summary(pl):	Programy przyk≥adowe XML-RPC
+Summary(pl.UTF-8):   Programy przyk≈Çadowe XML-RPC
 Group:		Applications/Text
 Requires:	%{name} = %{version}-%{release}
 
 %description progs
 Sample programs for XML-RPC EPI library.
 
-%description progs -l pl
-Programy przyk≥adowe do biblioteki XML-RPC EPI.
+%description progs -l pl.UTF-8
+Programy przyk≈Çadowe do biblioteki XML-RPC EPI.
 
 %prep
 %setup -q
