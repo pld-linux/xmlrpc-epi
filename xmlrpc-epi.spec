@@ -3,14 +3,12 @@
 Summary:	XML-RPC EPI library - an implementation of the xmlrpc protocol
 Summary(pl.UTF-8):	Biblioteka XML-RPC EPI - implementacja protokołu xmlrpc
 Name:		xmlrpc-epi
-Version:	0.51
-Release:	4
+Version:	0.54.1
+Release:	0.1
 License:	BSD
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/xmlrpc-epi/%{name}-%{version}.tar.gz
-# Source0-md5:	51c5f062365f82ff1c26c2763e7f0654
-Patch0:		%{name}-system-expat.patch
-Patch1:		%{name}-gcc4.patch
+# Source0-md5:	546ce341e7d79691371344449cb9e484
 URL:		http://xmlrpc-epi.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -23,11 +21,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xmlrpc-epi is an implementation of the xmlrpc protocol in C. It
 provides an easy to use API for developers to serialize RPC requests
-to and from XML. It doesn't include a transport layer, such as
-HTTP. The API is primarily based upon proprietary code written for
-internal usage at Epinions.com, and was later modified to incorporate
-concepts from the xmlrpc protocol. It passed the xmlrpc validation
-test suite in December 2000.
+to and from XML. It doesn't include a transport layer, such as HTTP.
+The API is primarily based upon proprietary code written for internal
+usage at Epinions.com, and was later modified to incorporate concepts
+from the xmlrpc protocol. It passed the xmlrpc validation test suite
+in December 2000.
 
 %description -l pl.UTF-8
 xmlrpc-epi to implementacja protokołu xmlrpc napisana w C. Daje proste
@@ -76,9 +74,7 @@ Sample programs for XML-RPC EPI library.
 Programy przykładowe do biblioteki XML-RPC EPI.
 
 %prep
-%setup -q
-%patch0 -p1
-%patch1 -p1
+%setup -q -n xmlrpc
 
 %build
 %{__libtoolize}
@@ -104,6 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxmlrpc-epi.so.0
 
 %files devel
 %defattr(644,root,root,755)
