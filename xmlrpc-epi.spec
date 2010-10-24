@@ -7,7 +7,7 @@ Version:	0.54.1
 Release:	1
 License:	BSD
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/xmlrpc-epi/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/xmlrpc-epi/%{name}-%{version}.tar.gz
 # Source0-md5:	546ce341e7d79691371344449cb9e484
 URL:		http://xmlrpc-epi.sourceforge.net/
 BuildRequires:	autoconf
@@ -99,20 +99,20 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libxmlrpc-epi.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxmlrpc-epi.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libxmlrpc-epi.so
+%{_libdir}/libxmlrpc-epi.la
 %{_includedir}
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libxmlrpc-epi.a
 
 %files progs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/xmlrpc-epi-*
