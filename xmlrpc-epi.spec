@@ -1,14 +1,14 @@
 # TODO:
 # - fix group for -progs subpackage
 Summary:	XML-RPC EPI library - an implementation of the xmlrpc protocol
-Summary(pl):	Biblioteka XML-RPC EPI - implementacja protoko≥u xmlrpc
+Summary(pl.UTF-8):	Biblioteka XML-RPC EPI - implementacja protoko≈Çu xmlrpc
 Name:		xmlrpc-epi
-Version:	0.51
+Version:	0.54.1
 Release:	1
 License:	BSD
 Group:		Libraries
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/xmlrpc-epi/%{name}-%{version}.tar.gz
-Patch0:		%{name}-system-expat.patch
+Source0:	http://downloads.sourceforge.net/xmlrpc-epi/%{name}-%{version}.tar.gz
+# Source0-md5:	546ce341e7d79691371344449cb9e484
 URL:		http://xmlrpc-epi.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -21,65 +21,64 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xmlrpc-epi is an implementation of the xmlrpc protocol in C. It
 provides an easy to use API for developers to serialize RPC requests
-to and from XML. It doesn't include a transport layer, such as
-HTTP. The API is primarily based upon proprietary code written for
-internal usage at Epinions.com, and was later modified to incorporate
-concepts from the xmlrpc protocol. It passed the xmlrpc validation
-test suite in December 2000.
+to and from XML. It doesn't include a transport layer, such as HTTP.
+The API is primarily based upon proprietary code written for internal
+usage at Epinions.com, and was later modified to incorporate concepts
+from the xmlrpc protocol. It passed the xmlrpc validation test suite
+in December 2000.
 
-%description -l pl
-xmlrpc-epi to implementacja protoko≥u xmlrpc napisana w C. Daje proste
-w uøyciu API dla programistÛw do serializacji ø±daÒ RPC do i z XML.
-Nie zawiera warstwy transportowej typu HTTP. API bazuje g≥Ûwnie na
-w≥asno∂ciowym kodzie napisanym do uøytku wewnÍtrznego na Epinions.com
-i zosta≥o pÛºniej zmodyfikowane, aby w≥±czyÊ idee protoko≥u xmlrpc.
-API to przesz≥o test sprawdzaj±cy poprawno∂Ê implementacji w grudniu
+%description -l pl.UTF-8
+xmlrpc-epi to implementacja protoko≈Çu xmlrpc napisana w C. Daje proste
+w u≈ºyciu API dla programist√≥w do serializacji ≈ºƒÖda≈Ñ RPC do i z XML-a.
+Nie zawiera warstwy transportowej typu HTTP. API bazuje g≈Ç√≥wnie na
+w≈Çasno≈õciowym kodzie napisanym do u≈ºytku wewnƒôtrznego na Epinions.com
+i zosta≈Ço p√≥≈∫niej zmodyfikowane, aby w≈ÇƒÖczyƒá idee protoko≈Çu xmlrpc.
+API to przesz≈Ço test sprawdzajƒÖcy poprawno≈õƒá implementacji w grudniu
 2000.
-     
+
 %package devel
 Summary:	Header files etc to develop XML-RPC applications
-Summary(pl):	Pliki nag≥Ûwkowe do tworzenia aplikacji XML-RPC
+Summary(pl.UTF-8):	Pliki nag≈Ç√≥wkowe do tworzenia aplikacji XML-RPC
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
+Requires:	expat-devel
 
 %description devel
 Header files etc needed to develop XML-RPC applications.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe potrzebne do tworzenia aplikacji uøywaj±cych XML-RPC.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe potrzebne do tworzenia aplikacji u≈ºywajƒÖcych XML-RPC.
 
 %package static
 Summary:	Static XML-RPC EPI libraries
-Summary(pl):	Biblioteki statyczne XML-RPC EPI
+Summary(pl.UTF-8):	Biblioteki statyczne XML-RPC EPI
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static XML-RPC EPI libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne XML-RPC EPI.
 
 %package progs
 Summary:	XML-RPC sample programs
-Summary(pl):	Programy przyk≥adowe XML-RPC
+Summary(pl.UTF-8):	Programy przyk≈Çadowe XML-RPC
 Group:		Applications/Text
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description progs
 Sample programs for XML-RPC EPI library.
 
-%description progs -l pl
-Programy przyk≥adowe do biblioteki XML-RPC EPI.
+%description progs -l pl.UTF-8
+Programy przyk≈Çadowe do biblioteki XML-RPC EPI.
 
 %prep
-%setup -q
-%patch0 -p1
+%setup -q -n xmlrpc
 
 %build
-rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
@@ -95,24 +94,25 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libxmlrpc-epi.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxmlrpc-epi.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README COPYING
-%attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_libdir}/lib*.la
+%doc AUTHORS COPYING ChangeLog NEWS README
+%attr(755,root,root) %{_libdir}/libxmlrpc-epi.so
+%{_libdir}/libxmlrpc-epi.la
 %{_includedir}
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libxmlrpc-epi.a
 
 %files progs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/xmlrpc-epi-*
