@@ -1,0 +1,75 @@
+--- xmlrpc/sample/sample.c~	2008-03-21 20:52:51.000000000 +0100
++++ xmlrpc/sample/sample.c	2012-11-13 18:39:04.402378396 +0100
+@@ -450,7 +450,7 @@
+      char *outBuf = XMLRPC_REQUEST_ToXML(request, 0);
+ 
+      if(outBuf) {
+-        printf(outBuf);
++        puts(outBuf);
+         free(outBuf);
+      }
+   }
+@@ -460,7 +460,7 @@
+      char *outBuf = XMLRPC_REQUEST_ToXML(response, 0);
+ 
+      if(outBuf) {
+-        printf(outBuf);
++        puts(outBuf);
+         free(outBuf);
+      }
+   }
+--- xmlrpc/sample/client.c~	2008-03-21 20:52:51.000000000 +0100
++++ xmlrpc/sample/client.c	2012-11-13 18:39:31.142377440 +0100
+@@ -177,7 +177,7 @@
+      char *outBuf = XMLRPC_REQUEST_ToXML(request, 0);
+ 
+      if(outBuf) {
+-        printf(outBuf);
++        puts(outBuf);
+         free(outBuf);
+      }
+   }
+--- xmlrpc/sample/server.c~	2008-04-02 12:35:12.000000000 +0200
++++ xmlrpc/sample/server.c	2012-11-13 18:39:54.042376644 +0100
+@@ -374,7 +374,7 @@
+      char *outBuf = XMLRPC_REQUEST_ToXML(response, 0);
+ 
+      if(outBuf) {
+-        printf(outBuf);
++        puts(outBuf);
+         free(outBuf);
+      }
+   }
+--- xmlrpc/sample/server_compliance_test.c~	2008-04-02 12:35:13.000000000 +0200
++++ xmlrpc/sample/server_compliance_test.c	2012-11-13 18:40:11.635709370 +0100
+@@ -423,7 +423,7 @@
+       char *outBuf = XMLRPC_REQUEST_ToXML(response, 0);
+ 
+       if(outBuf) {
+-         printf(outBuf);
++         puts(outBuf);
+          free(outBuf);
+       }
+    }
+--- xmlrpc/sample/hello_client.c~	2008-03-21 20:52:51.000000000 +0100
++++ xmlrpc/sample/hello_client.c	2012-11-13 18:40:31.885708628 +0100
+@@ -43,7 +43,7 @@
+      char *outBuf = XMLRPC_REQUEST_ToXML(request, 0);
+ 
+      if(outBuf) {
+-        printf(outBuf);
++        puts(outBuf);
+         free(outBuf);
+      }
+   }
+--- xmlrpc/sample/hello_server.c~	2008-04-02 12:35:12.000000000 +0200
++++ xmlrpc/sample/hello_server.c	2012-11-13 18:40:45.649041479 +0100
+@@ -76,7 +76,7 @@
+      char *outBuf = XMLRPC_REQUEST_ToXML(response, 0);
+ 
+      if(outBuf) {
+-        printf(outBuf);
++        puts(outBuf);
+         free(outBuf);
+      }
+   }
