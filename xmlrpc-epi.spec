@@ -4,7 +4,7 @@ Summary:	XML-RPC EPI library - an implementation of the xmlrpc protocol
 Summary(pl.UTF-8):	Biblioteka XML-RPC EPI - implementacja protokołu xmlrpc
 Name:		xmlrpc-epi
 Version:	0.54.1
-Release:	5
+Release:	6
 License:	BSD
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/xmlrpc-epi/%{name}-%{version}.tar.gz
