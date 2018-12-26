@@ -1,23 +1,19 @@
-# TODO:
-# - fix group for -progs subpackage
 Summary:	XML-RPC EPI library - an implementation of the xmlrpc protocol
 Summary(pl.UTF-8):	Biblioteka XML-RPC EPI - implementacja protokołu xmlrpc
 Name:		xmlrpc-epi
-Version:	0.54.1
-Release:	6
+Version:	0.54.2
+Release:	1
 License:	BSD
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/xmlrpc-epi/%{name}-%{version}.tar.gz
-# Source0-md5:	546ce341e7d79691371344449cb9e484
+Source0:	http://downloads.sourceforge.net/xmlrpc-epi/%{name}-%{version}.tar.bz2
+# Source0-md5:	081e605491429cda17c5f021f211b8fd
 Patch0:		format-security.patch
 URL:		http://xmlrpc-epi.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	expat-devel
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_includedir	%{_prefix}/include/%{name}
 
 %description
 xmlrpc-epi is an implementation of the xmlrpc protocol in C. It
@@ -65,7 +61,7 @@ Biblioteki statyczne XML-RPC EPI.
 %package progs
 Summary:	XML-RPC sample programs
 Summary(pl.UTF-8):	Programy przykładowe XML-RPC
-Group:		Applications/Text
+Group:		Applications/Networking
 Requires:	%{name} = %{version}-%{release}
 
 %description progs
@@ -75,15 +71,16 @@ Sample programs for XML-RPC EPI library.
 Programy przykładowe do biblioteki XML-RPC EPI.
 
 %prep
-%setup -q -n xmlrpc
+%setup -q
 %patch0 -p1
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure \
+	--includedir=%{_includedir}/xmlrpc-epi \
 	--program-prefix=xmlrpc-epi-
 %{__make}
 
@@ -109,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS COPYING ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/libxmlrpc-epi.so
 %{_libdir}/libxmlrpc-epi.la
-%{_includedir}
+%{_includedir}/xmlrpc-epi
 
 %files static
 %defattr(644,root,root,755)
